@@ -11,7 +11,17 @@ class App {
 
 		//Execute
 		t1.start();
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		t2.start();
+		try {
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		//Print the balance
 		System.out.println("Balance: "+shared_account.getBalance()+" Acount number: "+shared_account.getNumberAccount());
