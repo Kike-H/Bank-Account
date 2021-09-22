@@ -32,4 +32,33 @@ public class CuentaBancaria {
 CuentaBancaria cuenta = new CuentaBancaria("12345-678",1000.00);
 // Create your threads from here.
 ```
+## How to execute 
+
+## Linux/Mac OS 
+
+### Compile 
+
+```bash
+./.compile/compiler.sh
+```
+
+### Execute 
+
+```bash
+./.compile/execute.sh
+```
+
+## Windows 
+
+### Compile 
+
+```cmd
+.\.compile\compiler.bat
+```
+
+### Execute 
+
+```cmd
+.\.compile\execute.bat
+```
 
