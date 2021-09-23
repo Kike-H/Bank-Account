@@ -1,7 +1,7 @@
 package com.app; 
 
 class App {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// Shared bank account
 		BankAccount shared_account = new BankAccount("12345-678", 1000.00);
 
@@ -11,17 +11,9 @@ class App {
 
 		//Execute
 		t1.start();
-		try {
-			t1.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		t1.join();
 		t2.start();
-		try {
-			t2.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		t2.join();
 
 		//Print the balance
 		System.out.println("Balance: "+shared_account.getBalance()+" Acount number: "+shared_account.getNumberAccount());
